@@ -1,0 +1,43 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/color_pure_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:textColor="@color/color_textcolor"
+        android:text="@string/mmm_home_mall"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/color_textcolor"
+            android:text="@string/mmm_main_tab_news"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/color_textcolor"
+            android:layout_weight="1"
+            android:text="@string/mmm_main_tab_work"/>
+
+
+    </LinearLayout>
+    <View
+        android:id="@+id/bg_toolbar_close"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

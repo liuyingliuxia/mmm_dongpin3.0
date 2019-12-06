@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 顶栏背景样式 -->
+
+    <!-- 顶栏标题文字样式 -->
+
+    <!-- 顶栏左边图标样式 -->
+
+    <!-- 顶栏左边文本样式 -->
+
+    <!-- 顶栏中右边图标样式 -->
+
+    <!-- 顶栏中右边文字样式 -->
+
+    <!--Dialog样式-->
+    <style name="MMMDialog" parent="Base.Theme.AppCompat.Dialog">
+        <!--设置dialog的背景-->
+        <item name="android:background">@android:color/transparent</item>
+        <!--显示区域背景是否透明-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--Dialog的windowFrame框为无-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否显示标题-->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否浮现在Activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否半透明-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--是否有覆盖-->
+        <item name="android:windowContentOverlay">@null</item>
+        <!--设置Dialog进出动画-->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <!--显示区域以外是否使用黑色半透明背景-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!--带有输入框的Dialog-->
+    <style name="BoxInputDialog" parent="MMMDialog">
+        <!--显示软件盘（有输入框的直接弹出）-->
+        <item name="android:windowSoftInputMode">stateAlwaysVisible</item>
+    </style>
+    <declare-styleable name="TransformDrawableText">
+        <attr name="trans_text" format="string" />
+        <attr name="trans_text_min" format="dimension" />
+        <attr name="trans_text_max" format="dimension" />
+        <attr name="trans_text_color" format="color" />
+        <attr name="trans_text_color_selected" format="color" />
+
+        <attr name="trans_drawable_def" format="reference" />
+        <attr name="trans_drawable_sel" format="reference" />
+        <attr name="trans_drawablePadding" format="dimension" />
+    </declare-styleable>
+
+</resources>

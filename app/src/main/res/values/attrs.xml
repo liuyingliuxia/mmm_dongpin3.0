@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!--    顶部标题栏-->
+    <declare-styleable name="TopTitleStyle">
+        <attr name="tts_bg" format="reference"/>
+        <attr name="tts_title_txt" format="reference"/>
+        <attr name="tts_title_leftTxt" format="reference"/>
+        <attr name="tts_title_leftImg" format="reference"/>
+        <attr name="tts_title_rightTxt" format="reference"/>
+        <attr name="tts_title_rightImg" format="reference"/>
+    </declare-styleable>
+
+        <!--向右扫边箭头-->
+    <declare-styleable name="RightStrokeView">
+        <attr name="linWidth" format="dimension"/>
+        <attr name="arrowWidth" format="dimension"/>
+        <attr name="corner" format="dimension" />
+        <attr name="strokeColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="MaxHeightView">
+        <attr name="mhv_HeightRatio" format="reference|float" />
+        <attr name="mhv_HeightDimen" format="reference|dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="InsideLine">
+        <!--线条位置-->
+        <attr name="line_gravity">
+            <flag name="Left" value="0x01" />
+            <flag name="Top" value="0x02" />
+            <flag name="Right" value="0x04" />
+            <flag name="Bottom" value="0x08" />
+        </attr>
+        <!--线条颜色-->
+        <attr name="line_color" format="color" />
+        <!--线条高度-->
+        <attr name="line_size" format="dimension" />
+
+        <!--左线高度、颜色、前后偏移量-->
+        <attr name="line_left_size" format="dimension" />
+        <attr name="line_left_color" format="color" />
+        <attr name="line_left_start" format="dimension" />
+        <attr name="line_left_end" format="dimension" />
+
+        <!--右线高度、颜色、前后偏移量-->
+        <attr name="line_right_size" format="dimension" />
+        <attr name="line_right_color" format="color" />
+        <attr name="line_right_start" format="dimension" />
+        <attr name="line_right_end" format="dimension" />
+
+
+        <!--上线高度、颜色、前后偏移量-->
+        <attr name="line_top_size" format="dimension" />
+        <attr name="line_top_color" format="color" />
+        <attr name="line_top_start" format="dimension" />
+        <attr name="line_top_end" format="dimension" />
+
+
+        <!--下线高度、颜色、前后偏移量-->
+        <attr name="line_bottom_size" format="dimension" />
+        <attr name="line_bottom_color" format="color" />
+        <attr name="line_bottom_start" format="dimension" />
+        <attr name="line_bottom_end" format="dimension" />
+
+    </declare-styleable>
+
+
+
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/llFrozenMall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+    <ImageView
+        android:id="@+id/ivGoods"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sotia_tofu" />
+
+        <TextView
+            android:id="@+id/tvGoodsName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_textcolor"
+            android:text="@string/mmm_sotia_tofu"/>
+
+        <TextView
+            android:id="@+id/tvGoodSpecification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/color_pure_white"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:textSize="10dp"
+            android:background="@drawable/mmm_textbg_r10"
+            android:text="@string/mmm_specification1"/>
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color15"
+            android:layout_marginTop="8dp"
+            android:text="@string/mmm_price_nego"/>
+
+        <TextView
+            android:id="@+id/tvPageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mmm_font_s10"
+            android:textSize="10dp"
+            android:text="@string/mmm_people_view"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

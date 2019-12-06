@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/llSearchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_main"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.SearchView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mmm_font_s16"
+            android:layout_marginRight="@dimen/mmm_font_s16"
+            android:background="@color/color_pure_white"
+
+            android:layout_weight="8"/>
+
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mmm_cancel"
+            android:layout_margin="@dimen/mmm_font_s12"
+            android:layout_gravity="center"
+            android:textColor="@color/color_pure_white"
+            android:textSize="@dimen/mmm_font_s16"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_main"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/mmm_font_s12"
+            android:text="@string/mmm_product"
+            android:layout_weight="1"
+            android:textColor="@color/color_textcolor"
+            android:textSize="@dimen/mmm_font_s16"
+            android:gravity="center" />
+
+        <View
+            android:layout_height="20dp"
+            android:layout_width="0.6dp"
+            android:layout_gravity="center"
+            android:background="@color/color_cut_off_line"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/mmm_font_s12"
+            android:layout_weight="1"
+            android:textSize="@dimen/mmm_font_s16"
+            android:gravity="center"
+            android:textColor="@color/color_hint"
+            android:text="@string/mmm_shop"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvSearchHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/clock"
+            android:drawablePadding="@dimen/mmm_font_s12"
+            android:text="@string/mmm_search_history"
+            android:textColor="@color/color_textcolor"
+            android:layout_margin="20dp"
+            android:textSize="@dimen/mmm_font_s16" />
+
+        <TextView
+            android:id="@+id/tvClearHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:drawableLeft="@drawable/delete"
+            android:text="@string/mmm_clean_history"
+            android:textColor="@color/color_hint"
+            android:layout_margin="20dp"/>
+
+
+    </LinearLayout>
+</LinearLayout> 

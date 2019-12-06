@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/mmm_main_bg">
+
+    <LinearLayout
+        android:id="@+id/llMainTitle"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/ivMenu"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:padding="@dimen/mmm_font_s10"
+            android:src="@drawable/avatar_menu"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/ivScan"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:src="@drawable/scan"
+            android:layout_marginLeft="20dp" />
+
+    </LinearLayout>
+</FrameLayout>
