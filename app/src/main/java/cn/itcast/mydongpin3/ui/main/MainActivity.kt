@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.in_toolbar_open.*
 import java.util.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(),View.OnClickListener {
 
     private val mStack = Stack <Fragment> ()
     private val mFrozenFragment by lazy { FrozenFragment() }
@@ -25,17 +25,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        //clickEvent()
         initFragment()
         changeFragment(0)
-
-        llSearch.setOnClickListener {
-            val intent = Intent()
-            intent.setClass(this, SearchActivity::class.java)
-            startActivity(intent)
-
-        }
-
+        llSearch.setOnClickListener (this)
+        llFrozen.setOnClickListener (this)
+        llNews.setOnClickListener (this)
+        llWork.setOnClickListener (this)
     }
 
     private fun initFragment () {
@@ -63,26 +58,19 @@ class MainActivity : AppCompatActivity() {
         manager.commit()
     }
 
-   /* fun clickEvent() {
-    app_bar.addOnOffsetChangedListener(AppBarLayout.OnOffsetChangedListener(){
-            appBarLayout: AppBarLayout, i: Int ->
-
-        fun onOffsetChanged( appBarLayout:AppBarLayout, verticalOffset :Int) {
-            //垂直方向偏移量
-            val offset :Int = Math.abs( verticalOffset )
-            //最大偏移距离
-            val scrollRange = appBarLayout.getTotalScrollRange();
-            if (offset <= scrollRange / 2) {
-                in_toolbar_open.setVisibility(View.VISIBLE);
-                in_toolbar_close.setVisibility(View.GONE);
-
-            } else {
-                in_toolbar_close.setVisibility(View.VISIBLE)
-                in_toolbar_open.setVisibility(View.GONE)
+    override fun onClick(v: View?) {
+        when (v?.id){
+            R.id.llFrozen -> changeFragment(0)
+            R.id.llNews -> changeFragment(1)
+            R.id.llWork -> changeFragment(2)
+            R.id.llSearch ->  {
+                val intent = Intent()
+                intent.setClass(this, SearchActivity::class.java)
+                startActivity(intent)
 
             }
         }
-    })
-}*/
+    }
+
 }
 
