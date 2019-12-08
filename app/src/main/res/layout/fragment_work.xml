@@ -3,10 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="cn.itcast.mydongpin3.ui.main.work.WorkFragment">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/mmm_main_tab_work" />
+    <include
+        layout="@layout/item_work"/>
 
 </FrameLayout>

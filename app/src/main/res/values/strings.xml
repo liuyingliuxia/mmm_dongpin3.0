@@ -111,5 +111,12 @@
     <string name="mmm_specification1">2500g/包*4</string>
     <string name="mmm_price_nego">价格面议</string>
     <string name="mmm_people_view">$人浏览</string>
+    <string name="mmm_news1">麦肯锡：2030年，逾1亿中国人需要学习新技能并转换岗位，这就...</string>
+    <string name="mmm_hint_title">【圈层】</string>
+    <string name="mmm_number">1</string>
+    <string name="mmm_by_identity_unlock">通过身份认证可使用该模块</string>
+    <string name="mmm_begin_auth">开始认证</string>
+    <string name="mmm_look_work_content"><u>提前看一看【我的工作】内容</u></string>
+    <string name="mmm_click_to_auth" >（点击按钮开始认证） </string>
 
 </resources>

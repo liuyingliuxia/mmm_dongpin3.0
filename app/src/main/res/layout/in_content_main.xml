@@ -17,4 +17,5 @@
 </androidx.core.widget.NestedScrollView>
 
 <!--作为Fragment的容器-->
-<!--    会报错：ScrollView can host only one direct child-->
+<!--    会报错：ScrollView can host only one direct child
+把 android:id="@+id/mContaier"放到 ll中就不会了  -->
