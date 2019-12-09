@@ -11,15 +11,34 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ui.main.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+
             </intent-filter>
+
         </activity>
 
         <activity android:name="com.sotia.mydongpin.ui.search.SearchActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name="com.sotia.mydongpin.ui.login.SingleLoginActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name="com.sotia.mydongpin.ui.login.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+
+        </activity>
+
+        <activity android:name="com.sotia.mydongpin.ui.scan.ScanActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".ui.toolbox.ToolBoxActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
     </application>
+
 
 </manifest>

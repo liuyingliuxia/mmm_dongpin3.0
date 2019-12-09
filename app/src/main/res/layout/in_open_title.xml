@@ -2,7 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="50dp"
-    android:background="@drawable/mmm_main_bg">
+    android:background="@drawable/home_bg_def">
 
     <LinearLayout
         android:id="@+id/llMainTitle"
@@ -12,23 +12,53 @@
 
 
         <ImageView
-            android:id="@+id/ivMenu"
-            android:layout_width="50dp"
-            android:layout_height="40dp"
-            android:padding="@dimen/mmm_font_s10"
-            android:src="@drawable/avatar_menu"/>
+            android:id="@+id/ivToolBarMyCenter"
+            android:layout_width="@dimen/mmm_avatar_size_in_contact"
+            android:layout_height="@dimen/mmm_avatar_size_in_contact"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/default_avatar_3" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
+
+            <FrameLayout
+                android:id="@+id/flToolBarSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="4dp"
+                android:alpha="0"
+                android:background="@drawable/mmm_search_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/search_3"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="请输入要查找的产品或店铺"
+                    android:textColor="@color/color6"
+                    android:textSize="@dimen/mmm_font_s12" />
+            </FrameLayout>
+
+
+        </FrameLayout>
         <ImageView
             android:id="@+id/ivScan"
             android:layout_width="50dp"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:src="@drawable/scan"
-            android:layout_marginLeft="20dp" />
+            android:padding="@dimen/mmm_font_s10" />
 
     </LinearLayout>
 </FrameLayout>

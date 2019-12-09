@@ -10,25 +10,37 @@
         android:background="@color/color_main"
         android:orientation="horizontal">
 
-        <androidx.appcompat.widget.SearchView
-            android:layout_marginTop="5dp"
+        <EditText
+            android:id="@+id/tvSearch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/mmm_font_s16"
-            android:layout_marginRight="@dimen/mmm_font_s16"
-            android:background="@color/color_pure_white"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/mmm_font_s10"
+            android:drawableLeft="@drawable/search_1"
+            android:background="@drawable/mmm_c03_s00_search"
+            android:paddingLeft="@dimen/mmm_font_s10"
+            android:paddingRight="70dp"
+            android:paddingTop="@dimen/mmm_font_s10"
+            android:paddingBottom="@dimen/mmm_font_s10"
+            android:layout_marginLeft="@dimen/mmm_font_s10"
+            android:layout_marginTop="@dimen/mmm_font_s10"
+            android:imeOptions="actionSearch"
+            android:textSize="@dimen/mmm_font_s16"
 
-            android:layout_weight="8"/>
+            android:hint="@string/mmm_hint_please_input_search_content" />
 
         <TextView
             android:id="@+id/tvCancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/mmm_cancel"
-            android:layout_margin="@dimen/mmm_font_s12"
-            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="@dimen/mmm_font_s10"
+            android:layout_marginRight="@dimen/mmm_font_s10"
+            android:layout_gravity="center_vertical"
             android:textColor="@color/color_pure_white"
             android:textSize="@dimen/mmm_font_s16"/>
+
     </LinearLayout>
 
     <LinearLayout
@@ -38,12 +50,13 @@
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/tvProduct"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="@dimen/mmm_font_s12"
             android:text="@string/mmm_product"
             android:layout_weight="1"
-            android:textColor="@color/color_textcolor"
+            android:textColor="@color/yellow"
             android:textSize="@dimen/mmm_font_s16"
             android:gravity="center" />
 
@@ -54,6 +67,7 @@
             android:background="@color/color_cut_off_line"/>
 
         <TextView
+            android:id="@+id/tvShop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="@dimen/mmm_font_s12"

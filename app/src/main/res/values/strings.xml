@@ -118,5 +118,6 @@
     <string name="mmm_begin_auth">开始认证</string>
     <string name="mmm_look_work_content"><u>提前看一看【我的工作】内容</u></string>
     <string name="mmm_click_to_auth" >（点击按钮开始认证） </string>
-
+    <string name="mmm_new2">卫龙：要营销也要娱乐，看一个“卖辣条的”花样活法！</string>
+    <string name="mmm_hint_please_input_search_content">请输入您要搜索的内容</string>
 </resources>

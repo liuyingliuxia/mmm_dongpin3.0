@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_pure_white"
+    android:theme="@style/AppTheme.Transparent"
+    tools:context=".ui.main.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:id="@+id/firstLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/space"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layoutTab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="50dp">
+
+                <TextView
+                    android:id="@+id/tvTabCaptha"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:gravity="right|center_vertical"
+                    android:padding="5dp"
+                    android:textColor="@color/state_selected_c3_c9"
+                    android:text="@string/mmm_captcha_login"
+                    android:textSize="20dp"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height = "20dp"
+                    android:layout_marginLeft = "20dp"
+                    android:layout_marginRight = "20dp"
+                    android:background="@color/color_main"/>
+                <!--   View是垂直分割线-->
+
+                <TextView
+                    android:id="@+id/tvTabPwd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:gravity="left|center_vertical"
+                    android:textColor="@color/state_selected_c3_c9"
+                    android:text="@string/mmm_password_login"
+                    android:textSize="20dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layoutPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mmm_phone"
+                        android:textColor="@color/color_textcolor"
+                        android:textSize="16dp"/>
+
+                    <EditText
+                        android:id="@+id/etPhone"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:maxLines="1"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:hint="@string/mmm_hint_please_input_phone"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/color_textcolor"
+                        android:textColorHint="@color/color_hint"
+                        android:textSize="16dp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height = "0.6dp"
+                        android:background="@color/color_cut_off_line"/>
+                        <!--   View作为水平分割线-->
+
+                <LinearLayout
+                    android:id="@+id/layoutCaptcha"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mmm_captcha"
+                        android:textColor="@color/color_textcolor"
+                        android:textSize="16dp"/>
+
+                    <EditText
+                        android:id="@+id/etCaptcha"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:hint="@string/mmm_hint_please_input_captcha"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/color_textcolor"
+                        android:textColorHint="@color/color_hint"
+                        android:textSize="16dp"/>
+
+                    <!-- android:background="@null" 隐藏editText的下划线 -->
+
+                    <View
+                        android:layout_width="0.6dp"
+                        android:layout_height="10dp"
+                        android:background="@color/color_cut_off_line"/>
+
+                    <TextView
+                        android:id="@+id/tvCaptcha"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="6dp"
+                        android:text="@string/mmm_get_captcha"
+                        android:textColor="@color/state_enabled_c9_c6"
+                        android:textSize="16dp"/>
+
+                </LinearLayout>
+
+            <!--preview视图中不显示，密码登录表单如下：-->
+
+                <LinearLayout
+                    android:id="@+id/layoutPwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mmm_password"
+                        android:textColor="@color/color_textcolor"
+                        android:textSize="16dp"/>
+
+                    <EditText
+                        android:id="@+id/etPwd"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:layout_gravity="center_vertical"
+                        android:hint="@string/mmm_hint_please_input_password"
+                        android:digits="_0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/color_textcolor"
+                        android:textColorHint="@color/color_hint"
+                        android:textSize="16dp"/>
+
+                    <View
+                        android:layout_width="0.6dp"
+                        android:layout_height="10dp"
+                        android:background="@color/color_cut_off_line"/>
+
+                    <TextView
+                        android:id="@+id/tvRetrievePwd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="6dp"
+                        android:text="@string/mmm_retrieve_pwd"
+                        android:textColor="@color/color_main"
+                        android:textSize="16dp"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.6dp"
+                    android:background="@color/color_cut_off_line" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/twoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!--CarView不会有代码自动填充-->
+            <!--  切换账号时才显示的界面-->
+<!--            <android.support.v7.widget.CarView-->
+<!--                android:id = "@+id/cardView"-->
+<!--                android:layout_width = "75dp"-->
+<!--                android:layout_height = "75dp"-->
+<!--                android:layout_gravity = "center_horizontal">-->
+
+
+<!--                <ImageView>-->
+
+<!--                </ImageView>-->
+
+<!--            </android.support.v7.widget.CarView>-->
+
+            <TextView
+                android:id="@+id/tvAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:id="@+id/layoutCaptcha2"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mmm_captcha"
+                    android:textColor="@color/color_textcolor"
+                    android:textSize="16dp"/>
+
+                <EditText
+                    android:id="@+id/etCaptcha2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:hint="@string/mmm_hint_please_input_captcha"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/color_textcolor"
+                    android:textColorHint="@color/color_hint"
+                    android:textSize="16dp"/>
+
+                <!-- android:background="@null" 隐藏editText的下划线 -->
+
+                <View
+                    android:layout_width="0.6dp"
+                    android:layout_height="10dp"
+                    android:background="@color/color_cut_off_line"/>
+
+                <TextView
+                    android:id="@+id/tvCaptcha2"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="6dp"
+                    android:text="@string/mmm_get_captcha"
+                    android:textColor="@color/state_enabled_c9_c6"
+                    android:textSize="16dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutPwd2"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mmm_password"
+                    android:textColor="@color/color_textcolor"
+                    android:textSize="16dp"/>
+
+                <EditText
+                    android:id="@+id/etPwd2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:layout_gravity="center_vertical"
+                    android:hint="@string/mmm_hint_please_input_password"
+                    android:digits="_0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/color_textcolor"
+                    android:textColorHint="@color/color_hint"
+                    android:textSize="16dp"/>
+
+                <View
+                    android:layout_width="0.6dp"
+                    android:layout_height="10dp"
+                    android:background="@color/color_cut_off_line"/>
+
+                <TextView
+                    android:id="@+id/tvRetrievePwd2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="6dp"
+                    android:text="@string/mmm_retrieve_pwd"
+                    android:textColor="@color/color_main"
+                    android:textSize="16dp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:background= "@color/color_cut_off_line" />
+
+            <TextView
+                android:id="@+id/tvSwitchType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/mmm_use_password_login"
+                android:textColor="@color/color_textcolor"
+                android:textSize="17dp"
+                android:visibility="visible"/>
+
+        </LinearLayout>
+
+        <!--此View作为整个页面的中心分界线-->
+
+        <View
+            android:id="@+id/space"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/space"
+            android:layout_marginTop="21dp"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:text="@string/mmm_login"
+            android:textColor="@color/color_textcolor"
+            android:textSize="18dp"
+            android:background="@drawable/state_enabled_r0503_r0506" />
+        
+        <LinearLayout
+            android:id="@+id/agreementLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvLogin"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mmm_login_is_agree"
+                android:textSize="14dp"
+                android:textColor="@color/color_subhead"/>
+            
+            <TextView
+                android:id="@+id/tvAgreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/mmm_user_protocol"
+                android:textColor="@color/color_main"
+                android:textSize="14dp"/>
+            
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/layoutService"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/agreementLayout"
+            android:gravity="center_horizontal|bottom"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mmm_problem_in_login"
+                android:textColor="@color/color_textcolor"
+                android:textSize="14dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mmm_call_service"
+                    android:textSize="14dp"
+                    android:textColor="@color/color_textcolor"/>
+                
+                <TextView
+                    android:id="@+id/tvServiceTel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mmm_service_phone"
+                    android:textSize="14dp"
+                    android:textColor="@color/color_main"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|bottom"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.6dp"
+                    android:layout_gravity="center"
+                    android:background="@color/color_cut_off_line" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/color_pure_white"
+                    android:text="或"
+                    android:textColor="@color/color_subhead"
+                    android:textSize="18dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tvSwitchAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/mmm_c05_s07_s00_w0_r0503"
+                android:gravity="center"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp"
+                android:text="@string/mmm_switch_account"
+                android:textColor="@color/color_main"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

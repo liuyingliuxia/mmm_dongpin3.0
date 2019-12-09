@@ -1,4 +1,4 @@
-package cn.itcast.easy_recycler
+package cn.itcast.mydongpin3.ui.main.news
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import cn.itcast.mydongpin3.R
 import kotlinx.android.synthetic.main.item_frozen_mall.view.*
 
-class MallAdapter(var list:  MutableList<String>, var context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class NewsAdapter(var list:  MutableList<String>, var context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     var onClick: OnItemClickListener? = null
 
@@ -18,7 +18,7 @@ class MallAdapter(var list:  MutableList<String>, var context: Context) : Recycl
 
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): RecyclerView.ViewHolder {
-        val itemView = LayoutInflater.from(context).inflate(R.layout.item_frozen_mall, p0, false)
+        val itemView = LayoutInflater.from(context).inflate(R.layout.item_news, p0, false)
         val holder = Holder(itemView)
         itemView.setOnClickListener {
             onClick!!.OnItemClick(itemView, itemView.tag as Int)

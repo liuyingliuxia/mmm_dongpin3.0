@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+    <LinearLayout
+        style="?attr/tts_bg"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:orientation="horizontal"
+        android:background="@color/color_main">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/back_1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/mmm_font_s12"
+            android:layout_weight="1"
+            android:text="@string/mmm_toolbox"
+            android:textColor="@color/color_pure_white"
+            android:textSize="@dimen/mmm_font_s16" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/mmm_font_s12"
+            android:layout_weight="3"
+            android:text="@string/mmm_edit"
+            android:textColor="@color/color_pure_white"
+            android:textSize="@dimen/mmm_font_s16" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_pure_white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_textcolor"
+                android:text="@string/mmm_bottomtab_function"
+                android:textSize="@dimen/mmm_font_s16"
+                android:padding="@dimen/mmm_font_s10"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/mmm_font_s10"
+                android:text="@string/mmm_press_drag"
+                android:layout_marginLeft="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:gravity="center_horizontal"
+                android:drawableTop="@drawable/tab_ic_chat_sel"
+                android:text="@string/mmm_chat"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:gravity="center_horizontal"
+                android:drawableTop="@drawable/tab_ic_talk_sel"
+                android:text="@string/mmm_talk" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:src="@drawable/add_1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:gravity="center_horizontal"
+                android:text="@string/mmm_talk"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+
+        <view
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:background="@color/color_background"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_textcolor"
+            android:text="@string/mmm_often_use"
+            android:textSize="@dimen/mmm_font_s16"
+            android:padding="@dimen/mmm_font_s10" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:gravity="center_horizontal"
+                android:drawableTop="@drawable/tab_ic_msg_sel"
+                android:text="@string/mmm_mine_msg"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:gravity="center_horizontal"
+                android:drawableTop="@drawable/tab_ic_seen_sel"
+                android:text="@string/mmm_iwatch"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:gravity="center_horizontal"
+                android:drawableTop="@drawable/tab_ic_merchantlist_sel"
+                android:text="@string/mmm_merchant_list"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:gravity="center_horizontal"
+                android:text="@string/mmm_merchant_list"
+                android:visibility="invisible"/>
+        </LinearLayout>
+
+         </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

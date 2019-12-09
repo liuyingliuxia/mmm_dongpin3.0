@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/work_img_blank"
+        android:layout_gravity="center"
+        android:padding = "20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/mmm_font_s16"
+        android:layout_gravity="center"
+        android:text="@string/mmm_by_identity_unlock"
+        android:textColor="@color/color_textcolor" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:layout_gravity="center"
+        android:text="@string/mmm_look_work_content"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/color_main" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/mmm_font_s12"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="@string/mmm_click_to_auth"
+        android:textColor="@color/color_hint" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/color_main"
+        android:textColor="@color/color_pure_white"
+        android:text="@string/mmm_begin_auth"
+        android:layout_marginTop="@dimen/mmm_font_s10"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp" />
+
+</LinearLayout>

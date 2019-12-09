@@ -6,4 +6,7 @@
     <dimen name="mmm_font_s14">14dp</dimen>
     <dimen name="mmm_font_s13">13dp</dimen>
     <dimen name="mmm_font_s4">4dp</dimen>
+    <dimen name="activity_top_height">42dp</dimen>
+    <dimen name="mmm_avatar_size_in_contact">30dip</dimen>
+    <dimen name="mmm_avatar_size_default">50dp</dimen>
 </resources>
