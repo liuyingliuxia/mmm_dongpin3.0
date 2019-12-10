@@ -1,0 +1,34 @@
+ 学习笔记：
+1. toolbar点击事件：
+ setSupportActionBar(toolbar)
+        toolbar.inflateMenu(R.menu.main)
+        toolbar.setOnMenuItemClickListener{
+            item ->when (item.itemId){
+            R.id.action_scan -> openCamera()
+        }
+            false
+        }
+		
+2.  override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return super.onOptionsItemSelected(item)
+    }
+	是所有actionBar的点击事件 
+	
+3.Android中 shape 属性详解 ：https://www.cnblogs.com/MianActivity/p/5867776.html ：
+        1.Corners ：圆角   2. solid 内部填充色     3.gradient 渐变色   4. stroke 描边属性   5.size 和padding （不常用）
+        shape的属性 :1: rectangle矩形   2：oval 椭圆   3：line 线性    4.ring 环形
+      
+4.Fragment是到Android3.0+ 以后，Android新增了Fragments，在没有 Fragment 之前，一个屏幕只能放一个 Activity。这是一个起源时间大家要知道是什么时候开始引入的。
+
+
+5. 当把 xml的 selector自定义为文字字体色，会出现紫色
+
+6.    android:imeOptions="actionSearch" EditText修改键盘的回车键
+
+7.activity_toolbox.xml中的 <View />作为分割线 会报错 ，改为 <TextView> 解决
+8.使EditView框中的键盘回车变成搜索 ： 
+设置 
+android:imeOptions="actionSearch"
+android:maxLines="1"
+较低SDK版本中，还需要增加
+android:singleLine="true"
