@@ -15,8 +15,6 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import cn.itcast.easy_recycler.MallAdapter
 import cn.itcast.mydongpin3.R
-import cn.itcast.mydongpin3.entity.Goods
-import cn.itcast.mydongpin3.ui.main.MainActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_frozen.*
 import kotlinx.android.synthetic.main.fragment_frozen.view.*
@@ -29,7 +27,7 @@ import kotlin.collections.ArrayList
 class FrozenFragment : Fragment(),SwipeRefreshLayout.OnRefreshListener {
     override fun onRefresh() {
         srlMain.isRefreshing = false
-        addData()
+       // addData()
     }
 
     private var list: MutableList<String> = ArrayList()
@@ -50,7 +48,12 @@ class FrozenFragment : Fragment(),SwipeRefreshLayout.OnRefreshListener {
                 Toast.makeText(activity, position.plus(1).toString(), Toast.LENGTH_SHORT).show()
             }
         })
+        //返回 Fragment的 View
+        return view
+    }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         //下拉刷新item
         //报错 ：void androidx.recyclerview.widget.RecyclerView.setOnScrollListener(androidx.recyclerview.widget.RecyclerView$OnScrollListener)' on a null object reference
         rv_mall.setOnScrollListener(object : RecyclerView.OnScrollListener() {
@@ -58,20 +61,18 @@ class FrozenFragment : Fragment(),SwipeRefreshLayout.OnRefreshListener {
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
                 if (newState == RecyclerView.SCROLL_STATE_IDLE && lastVisibleItem!! + 1 == adapter?.itemCount) {
-                    addData()
+                    //addData()
                 }
             }
 
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 super.onScrolled(recyclerView, dx, dy)
-                val layoutManager = recyclerView.layoutManager as LinearLayoutManager
+                val layoutManager = recyclerView.layoutManager as GridLayoutManager
                 //最后一个可见的ITEM
                 lastVisibleItem = layoutManager.findLastVisibleItemPosition()
             }
         })
 
-        //返回 Fragment的 View
-        return view
     }
 
     fun getList(): MutableList<String> {
@@ -88,6 +89,9 @@ class FrozenFragment : Fragment(),SwipeRefreshLayout.OnRefreshListener {
             list.add(i.times(3).toString() + "人浏览")
             rv_mall.adapter?.notifyDataSetChanged()
         }
+  //notifyDataSetChanged方法通过一个外部的方法控制
+  // 如果适配器的内容改变时需要强制调用getView来刷新每个Item的内容
+
     }
 }
 
