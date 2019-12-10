@@ -31,28 +31,28 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
             android:layout_marginTop="@dimen/mmm_font_s16"
-            android:background="@drawable/mmm_c90_s08_s00_w0_r9005"
-            android:alpha="1">
+            android:layout_marginRight="20dp"
+            android:alpha="1"
+            android:background="@drawable/mmm_c90_s08_s00_w0_r9005">
 
             <TextView
                 android:id="@+id/tvSearch"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:drawablePadding="@dimen/mmm_font_s4"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:drawableLeft="@drawable/search_3"
-                android:text="@string/mmm_hint_please_input_search"
-                android:textSize="@dimen/mmm_font_s12"
+                android:drawablePadding="@dimen/mmm_font_s4"
                 android:gravity="center_vertical"
-                android:textColor="@color/color_hint" />
+                android:text="@string/mmm_hint_please_input_search"
+                android:textColor="@color/color_hint"
+                android:textSize="@dimen/mmm_font_s12" />
 
-    </FrameLayout>
+        </FrameLayout>
 
-    <LinearLayout
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/mmm_font_s16"

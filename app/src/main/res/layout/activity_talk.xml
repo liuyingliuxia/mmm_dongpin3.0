@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:orientation="vertical"
+    tools:context="cn.itcast.mydongpin3.ui.talk.TalkActivity">
+
+    <RelativeLayout
+        style="?attr/tts_bg"
+        android:layout_width="match_parent"
+        android:background="@color/color_main"
+        android:layout_height="@dimen/activity_top_height">
+        <LinearLayout
+            android:id="@+id/mTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/mmm_font_s16"
+                android:src="@drawable/back_1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="@string/mmm_service1"
+                android:textColor="@color/color_pure_white"
+                android:textSize="@dimen/mmm_font_s14" />
+
+            <ImageView
+                android:id="@+id/ivMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingRight="@dimen/mmm_font_s16"
+                android:src="@drawable/chatlist_ic_set_def" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/rvTalk">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/color_pure_white"
+        android:gravity="bottom">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/mmm_font_s10"
+            android:layout_marginTop="@dimen/mmm_font_s10"
+            android:layout_marginBottom="@dimen/mmm_font_s10"
+            android:background="@drawable/state_talk_oval_blue"
+            android:padding="5dp"
+            android:src="@drawable/talk_white" />
+<!--设置左右边距-->
+        <EditText
+            android:id="@+id/etTalk"
+            android:background="@drawable/state_c90_talk_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/mmm_font_s10"
+            android:layout_marginRight="@dimen/mmm_font_s10"
+            android:layout_gravity="center"
+            android:textSize="@dimen/mmm_font_s12"
+            android:imeOptions="actionSend"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="@dimen/mmm_font_s10"
+            android:textColor="@color/color_textcolor" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/mmm_font_s10"
+            android:layout_marginRight="@dimen/mmm_font_s10"
+            android:layout_marginTop="@dimen/mmm_font_s10"
+            android:padding="5dp"
+            android:background="@drawable/state_select_oval_bg"
+            android:src="@drawable/smell" />
+
+        <ImageView
+            android:id="@+id/ivAdd"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/mmm_font_s10"
+            android:layout_marginRight="@dimen/mmm_font_s10"
+            android:background="@drawable/state_select_oval_bg"
+            android:layout_marginBottom="@dimen/mmm_font_s10"
+            android:padding="5dp"
+            android:src="@drawable/add"/>
+
+        <TextView
+            android:id="@+id/tvSend"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:text="@string/mmm_send"
+            android:gravity="center"
+            android:padding="5dp"
+            android:background="@drawable/mmm_send_bg"
+            android:textColor="@color/color_pure_white"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        style="?attr/tts_bg"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:orientation="horizontal"
+        android:background="@color/color_main">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            style="?attr/tts_title_leftImg"
+            android:src="@drawable/back_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"/>
+
+        <TextView
+            style="?attr/tts_title_txt"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="@dimen/mmm_font_s10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/color_pure_white"
+            android:textSize="@dimen/mmm_font_s16"
+            android:text="@string/mmm_identity"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"
+        android:layout_marginRight="@dimen/mmm_font_s12"
+        android:layout_marginTop="24dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/identity_ic_robot"/>
+
+        <TextView
+            android:id="@+id/tvTips"
+            android:layout_width="160dp"
+            android:layout_height="70dp"
+            android:background="@drawable/identity_bg_talk_warn"
+            android:lineSpacingExtra="8dp"
+            android:paddingTop="20dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="26dp"
+            android:textSize="@dimen/mmm_font_s14"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="60dp"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:id="@+id/btnWholesaler"
+            android:layout_width="201dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="55dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/mmm_rectanle_corner_c19"
+            android:drawableLeft="@drawable/identity_ic_wholesaler"
+            android:paddingLeft="@dimen/mmm_font_s16"
+            android:drawablePadding="@dimen/mmm_font_s13"
+            android:textSize="@dimen/mmm_font_s16"
+            android:textColor="@color/color_pure_white"
+            android:text="@string/mmm_wholesaler"/>
+
+        <Button
+            android:id="@+id/btnManufaturer"
+            android:layout_width="201dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="55dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/mmm_c05_s09_s00_w0_r0506"
+            android:drawableLeft="@drawable/identity_ic_manufacturer"
+            android:paddingLeft="@dimen/mmm_font_s16"
+            android:drawablePadding="13dp"
+            android:textSize="@dimen/mmm_font_s16"
+            android:textColor="@color/color_pure_white"
+            android:text="@string/mmm_manufacturer"/>
+
+        <Button
+            android:id="@+id/btnTerminal"
+            android:layout_width="201dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="55dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/mmm_rectangle_c5_c18"
+            android:drawableLeft="@drawable/identity_ic_cater"
+            android:paddingLeft="@dimen/mmm_font_s16"
+            android:drawablePadding="13dp"
+            android:textSize="@dimen/mmm_font_s16"
+            android:textColor="@color/color_pure_white"
+            android:text="@string/mmm_terminal"/>
+
+    </LinearLayout>
+</LinearLayout>

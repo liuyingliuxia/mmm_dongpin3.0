@@ -10,24 +10,56 @@
         android:background="@color/color_main"
         android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/tvSearch"
+        <ImageView
+            android:id="@+id/ivBack"
+            style="?attr/tts_title_leftImg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/mmm_font_s10"
+            android:src="@drawable/back_1"
+            android:visibility="gone"/>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:drawablePadding="@dimen/mmm_font_s10"
-            android:drawableLeft="@drawable/search_1"
-            android:background="@drawable/mmm_c03_s00_search"
-            android:paddingLeft="@dimen/mmm_font_s10"
-            android:paddingRight="70dp"
-            android:paddingTop="@dimen/mmm_font_s10"
-            android:paddingBottom="@dimen/mmm_font_s10"
             android:layout_marginLeft="@dimen/mmm_font_s10"
             android:layout_marginTop="@dimen/mmm_font_s10"
-            android:imeOptions="actionSearch"
-            android:textSize="@dimen/mmm_font_s16"
+            android:layout_marginRight="@dimen/mmm_font_s10"
+            android:background="@drawable/mmm_c03_s00_search"
+            android:orientation="horizontal">
 
-            android:hint="@string/mmm_hint_please_input_search_content" />
+            <EditText
+                android:id="@+id/etInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/mmm_font_s10"
+                android:layout_marginTop="@dimen/mmm_font_s10"
+
+                android:background="@null"
+                android:drawableLeft="@drawable/search_2"
+                android:drawablePadding="@dimen/mmm_font_s10"
+                android:hint="@string/mmm_hint_please_input_search_content"
+                android:imeOptions="actionSearch"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/mmm_font_s10"
+                android:paddingTop="@dimen/mmm_font_s10"
+                android:singleLine="true"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/ivClean"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:src="@drawable/close_2"
+                android:visibility="invisible" />
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/tvCancel"
@@ -35,11 +67,12 @@
             android:layout_height="wrap_content"
             android:text="@string/mmm_cancel"
             android:layout_marginTop="2dp"
-            android:layout_marginLeft="@dimen/mmm_font_s10"
             android:layout_marginRight="@dimen/mmm_font_s10"
             android:layout_gravity="center_vertical"
             android:textColor="@color/color_pure_white"
             android:textSize="@dimen/mmm_font_s16"/>
+
+
 
     </LinearLayout>
 
@@ -49,16 +82,31 @@
         android:background="@color/color_main"
         android:orientation="horizontal">
 
+        <LinearLayout
+            android:id="@+id/llProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/mmm_font_s12"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
         <TextView
             android:id="@+id/tvProduct"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="@dimen/mmm_font_s12"
             android:text="@string/mmm_product"
-            android:layout_weight="1"
             android:textColor="@color/yellow"
-            android:textSize="@dimen/mmm_font_s16"
-            android:gravity="center" />
+            android:textSize="@dimen/mmm_font_s16" />
+
+        <View
+            android:id="@+id/vItemBottomLine"
+            android:layout_width="40dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/yellow"/>
+
+        </LinearLayout>
 
         <View
             android:layout_height="20dp"
@@ -66,17 +114,32 @@
             android:layout_gravity="center"
             android:background="@color/color_cut_off_line"/>
 
-        <TextView
-            android:id="@+id/tvShop"
+        <LinearLayout
+            android:id="@+id/llShop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="@dimen/mmm_font_s12"
+            android:paddingTop="@dimen/mmm_font_s12"
             android:layout_weight="1"
-            android:textSize="@dimen/mmm_font_s16"
             android:gravity="center"
-            android:textColor="@color/color_hint"
-            android:text="@string/mmm_shop"/>
+            android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/tvShop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mmm_shop"
+                android:textColor="@color/color_hint"
+                android:textSize="@dimen/mmm_font_s16" />
+
+            <View
+                android:id="@+id/vItemBottomLine2"
+                android:layout_width="40dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:visibility="invisible"
+                android:background="@color/yellow"/>
+
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout

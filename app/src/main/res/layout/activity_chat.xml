@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        style="?attr/tts_bg"
+        android:layout_width="match_parent"
+        android:background="@color/color_main"
+        android:layout_height="@dimen/activity_top_height">
+
+        <LinearLayout
+            android:id="@+id/mTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/mmm_font_s16"
+                android:src="@drawable/back_1"/>
+
+            <TextView
+                android:layout_width="81dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginLeft="100dp"
+                android:background="@drawable/state_select_chat"
+                android:text="@string/mmm_recently_chat"
+                android:textColor="@color/color_pure_white"
+                android:textSize="@dimen/mmm_font_s14" />
+
+            <TextView
+                android:layout_width="81dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/state_select_chatlist"
+                android:gravity="center"
+                android:layout_marginRight="100dp"
+                android:layout_weight="1"
+                android:text="@string/mmm_chat_list"
+                android:textColor="@color/color_pure_white"
+                android:textSize="@dimen/mmm_font_s14" />
+
+            <ImageView
+                android:id="@+id/ivMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingRight="@dimen/mmm_font_s16"
+                android:src="@drawable/add_5" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:background="@color/color17"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvImConnectError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:drawablePadding="4dp"
+            android:drawableStart="@drawable/chat_ic_warning_def"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="@string/mmm_im_network_error"
+            android:textColor="@color/color15"
+            android:drawableLeft="@drawable/chat_ic_warning_def" />
+
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/color_background">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/empty_chat_content"/>
+
+    </androidx.viewpager.widget.ViewPager>
+
+</LinearLayout>

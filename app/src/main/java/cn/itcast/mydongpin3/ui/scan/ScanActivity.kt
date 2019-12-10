@@ -13,9 +13,7 @@ class ScanActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_scan)
         tvBack.setOnClickListener() {
-            val scanIntent = Intent()
-            scanIntent.setClass(this, MainActivity::class.java)
-            startActivity(scanIntent)
+           finish()
         }
 
     }

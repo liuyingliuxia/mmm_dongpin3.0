@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent">
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        style="?attr/tts_bg"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:orientation="horizontal"
+        android:background="@color/color_main">
+
+        <TextView
+            style="?attr/tts_title_txt"
+            android:layout_marginTop="@dimen/mmm_font_s10"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/color_pure_white"
+            android:textSize="@dimen/mmm_font_s16"
+            android:text="@string/mmm_edit_infor"/>
+
+        <TextView
+            android:id="@+id/tvClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="@dimen/mmm_font_s10"
+            android:text="@string/mmm_close"
+            android:textSize="@dimen/mmm_font_s16"
+            android:textColor="@color/color_pure_white" />
+
+
+    </LinearLayout>
+
+</FrameLayout>
+    <LinearLayout
+        android:id="@+id/llavatar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:textColor="@color/color_textcolor"
+            android:textSize="16dp"
+            android:text="@string/mmm_head"/>
+
+        <ImageView
+            android:id="@+id/ivAvatar"
+            android:layout_marginRight="@dimen/mmm_font_s10"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/default_avatar_3"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:layout_marginLeft="20dp"
+        android:background="@color/color_hint"/>
+
+    <LinearLayout
+        android:id="@+id/llName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/color_textcolor"
+            android:textSize="16dp"
+            android:text="@string/mmm_name"/>
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mmm_zds"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/color_textcolor"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:layout_marginLeft="20dp"
+        android:background="@color/color_hint"/>
+
+    <LinearLayout
+        android:id="@+id/llSex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:textColor="@color/color_textcolor"
+            android:textSize="16dp"
+            android:text="@string/mmm_sex"/>
+
+        <TextView
+            android:id="@+id/tvSexSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/mmm_please_choose"
+            android:textColor="@color/color_hint"
+            android:textSize="16dp"
+            android:layout_marginRight="@dimen/mmm_font_s10"
+            android:drawablePadding="@dimen/mmm_font_s12"
+            android:drawableRight="@drawable/arrow_right_2" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:layout_marginLeft="20dp"
+        android:background="@color/color_hint"/>
+
+    <LinearLayout
+        android:id="@+id/llarea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:textColor="@color/color_textcolor"
+            android:textSize="16dp"
+            android:text="@string/mmm_area"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mmm_please_choose"
+            android:textColor="@color/color_hint"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="16dp"
+            android:layout_marginRight="@dimen/mmm_font_s10"
+            android:drawablePadding="@dimen/mmm_font_s12"
+            android:drawableRight="@drawable/personal_ic_site" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:layout_marginLeft="20dp"
+        android:background="@color/color_hint"/>
+
+    <LinearLayout
+        android:id="@+id/lladdress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:textColor="@color/color_textcolor"
+            android:textSize="16dp"
+            android:text="@string/mmm_address"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mmm_please_input_address"
+            android:textColor="@color/color_hint"
+            android:textSize="16dp"
+            android:gravity="center|end"
+            android:drawablePadding="@dimen/mmm_font_s12"
+            android:drawableRight="@drawable/arrow_right_2"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="@dimen/mmm_font_s10"
+            android:layout_marginBottom="@dimen/mmm_font_s10"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:layout_marginLeft="20dp"
+        android:background="@color/color_hint"/>
+
+    <LinearLayout
+        android:id="@+id/llprofession"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:textColor="@color/color_textcolor"
+            android:textSize="16dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/mmm_professio"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mmm_please_choose_profession"
+            android:textColor="@color/color_hint"
+            android:textSize="16dp"
+            android:layout_marginRight="@dimen/mmm_font_s10"
+            android:layout_marginTop="20dp"
+            android:drawableRight="@drawable/arrow_right_2"
+            android:drawablePadding="@dimen/mmm_font_s12"
+            android:layout_marginBottom="@dimen/mmm_font_s10"/>
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/color_background"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:textColor="@color/color_textcolor"
+            android:textSize="16dp"
+            android:text="@string/mmm_register_phone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/mmm_myphone"
+            android:textColor="@color/color_textcolor"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:layout_marginLeft="20dp"
+        android:background="@color/color_hint"/>
+
+    <LinearLayout
+        android:id="@+id/llassociation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:textColor="@color/color_textcolor"
+            android:textSize="16dp"
+            android:text="@string/mmm_association"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mmm_association"
+            android:textColor="@color/color_hint"
+            android:textSize="16dp"
+            android:drawableRight="@drawable/arrow_right_2"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:drawablePadding="@dimen/mmm_font_s12"
+            android:layout_marginRight="@dimen/mmm_font_s10" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:layout_marginLeft="20dp"
+        android:background="@color/color_hint"/>
+
+
+</LinearLayout>

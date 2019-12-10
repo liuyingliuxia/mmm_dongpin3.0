@@ -27,5 +27,7 @@
     <color name="yellow" >#FFEB3B</color>
     <color name="color19">#56b4f6</color>
     <color name="color18">#fc765d</color>
+    <color name="color17">#fafb89</color>
     <color name="textColor1">#8EBCDF</color>
+    <color name="color7">#e5e5e5</color>    <!-- 分割线颜色 -->
 </resources>
