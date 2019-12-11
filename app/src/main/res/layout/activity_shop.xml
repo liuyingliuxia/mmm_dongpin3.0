@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.itcast.mydongpin3.ui.shop.ShopActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/home_bg_def"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/back_1"/>
+
+        <TextView
+            android:id="@+id/tvSearch"
+            android:background="@drawable/state_search_key_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mmm_font_s10"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="30dp"
+            android:layout_marginRight="@dimen/mmm_font_s10"
+            android:drawableLeft="@drawable/search_3"
+            android:drawablePadding="@dimen/mmm_font_s4"
+            android:text="@string/mmm_input_keyword"
+            android:textColor="@color/color_hint"
+            android:layout_weight="1"
+            android:textSize="@dimen/mmm_font_s12" />
+
+        <TextView
+            android:id="@+id/tvSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/color_pure_white"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="@dimen/mmm_font_s10"
+            android:drawableTop="@drawable/menu_white"
+            android:textSize="@dimen/mmm_font_s12"
+            android:text="@string/mmm_sort"/>
+
+        <TextView
+            android:id="@+id/tvMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/mmm_font_s10"
+            android:layout_marginRight="@dimen/mmm_font_s10"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/color_pure_white"
+            android:drawableTop="@drawable/merchant_ic_more_def"
+            android:textSize="@dimen/mmm_font_s12"
+            android:text="@string/mmm_more"/>
+
+    </LinearLayout>
+
+</LinearLayout>

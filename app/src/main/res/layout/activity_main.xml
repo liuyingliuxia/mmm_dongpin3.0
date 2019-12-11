@@ -7,10 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 <!--主布局-->
-<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-    android:id="@+id/srlMain"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
 
@@ -57,8 +54,14 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
-
+        <!-- 下拉刷新布局 -->
+<!--        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
+<!--            android:id="@+id/srlMain"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
         <include layout="@layout/in_content_main" />
+
+<!--        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bnvMain"
@@ -70,7 +73,7 @@
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
 
 <!--    左侧抽屉布局-->
     <com.google.android.material.navigation.NavigationView

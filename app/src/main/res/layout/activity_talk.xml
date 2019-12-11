@@ -63,12 +63,11 @@
         android:gravity="bottom">
 
         <ImageView
+            android:id="@+id/ivTalk"
             android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="@dimen/mmm_font_s10"
-            android:layout_marginTop="@dimen/mmm_font_s10"
-            android:layout_marginBottom="@dimen/mmm_font_s10"
             android:background="@drawable/state_talk_oval_blue"
             android:padding="5dp"
             android:src="@drawable/talk_white" />
@@ -91,6 +90,7 @@
             android:textColor="@color/color_textcolor" />
 
         <ImageView
+            android:id="@+id/ivFace"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_gravity="center"

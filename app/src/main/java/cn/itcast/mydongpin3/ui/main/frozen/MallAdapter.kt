@@ -30,6 +30,7 @@ class MallAdapter(var list:  MutableList<String>, var context: Context) : Recycl
         return list.size
     }
 
+    //绑定view的数据
     override fun onBindViewHolder(viewHolder: RecyclerView.ViewHolder, position: Int) {
         viewHolder.itemView.tvPageView.text = list[position]
 

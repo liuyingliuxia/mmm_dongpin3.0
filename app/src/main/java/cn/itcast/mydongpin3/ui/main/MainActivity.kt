@@ -2,7 +2,6 @@ package cn.itcast.mydongpin3.ui.main
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.graphics.Color
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,15 +9,13 @@ import android.view.Gravity
 import android.view.MenuItem
 import android.view.View
 import androidx.annotation.RequiresApi
-import androidx.core.widget.NestedScrollView
 import androidx.fragment.app.Fragment
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import cn.itcast.mydongpin3.R
 import cn.itcast.mydongpin3.ui.chat.ChatActivity
 import cn.itcast.mydongpin3.ui.main.drawer.IdentityAuthActivity
 import cn.itcast.mydongpin3.ui.main.drawer.PersonInforActicity
 import cn.itcast.mydongpin3.ui.main.drawer.SettingActivity
-import cn.itcast.mydongpin3.ui.main.frozen.FrozenFragment
+import cn.itcast.mydongpin3.ui.main.frozen.MallFragment
 import cn.itcast.mydongpin3.ui.main.news.NewsFragment
 import cn.itcast.mydongpin3.ui.main.work.WorkFragment
 import cn.itcast.mydongpin3.ui.talk.TalkActivity
@@ -27,7 +24,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.sotia.mydongpin.ui.scan.ScanActivity
 import com.sotia.mydongpin.ui.search.SearchActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.in_content_main.*
 import kotlinx.android.synthetic.main.in_open_title.*
 import kotlinx.android.synthetic.main.in_toolbar_open.*
 import java.util.*
@@ -35,7 +31,7 @@ import java.util.*
 class MainActivity : AppCompatActivity(),View.OnClickListener,BottomNavigationView.OnNavigationItemSelectedListener{
 
     private val mStack = Stack <Fragment> ()
-    private val mFrozenFragment by lazy { FrozenFragment() }
+    private val mFrozenFragment by lazy { MallFragment() }
     private val mNewsFragment by lazy { NewsFragment () }
     private val mWorkFragment by lazy { WorkFragment() }
 

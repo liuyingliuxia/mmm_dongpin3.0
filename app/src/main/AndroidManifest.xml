@@ -9,12 +9,23 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.talk.TalkActivity"
+        <activity android:name=".ui.talk.TalkSettingActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-
-        <activity android:name=".ui.chat.ChatActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-
+        <activity
+            android:name=".ui.sort.ProductSortActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.shop.ShopActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.goods.GoodsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.talk.TalkActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.chat.ChatActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.main.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -54,7 +65,6 @@
         <activity
             android:name=".ui.main.drawer.UserAuthAcitivty"
             android:theme="@style/AppTheme.NoActionBar" />
-
     </application>
 
 </manifest>
