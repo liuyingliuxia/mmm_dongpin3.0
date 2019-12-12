@@ -34,7 +34,7 @@
                 android:layout_marginLeft="100dp"
                 android:background="@drawable/state_select_chat"
                 android:text="@string/mmm_recently_chat"
-                android:textColor="@color/color_pure_white"
+                android:textColor="@color/color_main"
                 android:textSize="@dimen/mmm_font_s14" />
 
             <TextView
@@ -64,7 +64,7 @@
         android:background="@color/color17"
         android:layout_gravity="center_horizontal"
         android:gravity="center"
-        android:visibility="gone"
+        android:visibility="visible"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -84,18 +84,12 @@
 
     </LinearLayout>
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewPager"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@color/color_background">
-
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
             android:src="@drawable/empty_chat_content"/>
 
-    </androidx.viewpager.widget.ViewPager>
 
 </LinearLayout>

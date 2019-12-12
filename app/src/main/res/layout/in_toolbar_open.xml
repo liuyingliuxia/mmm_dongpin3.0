@@ -1,233 +1,71 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/color_pure_white"
-    android:orientation="horizontal">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvMain"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/mmm_font_s10"
-        android:layout_marginRight="25dp"
-        android:layout_marginLeft="25dp"
-        app:cardCornerRadius="6dp">
+    android:layout_height="50dp"
+    android:orientation="horizontal"
+    android:background="@drawable/home_bg_def">
 
     <LinearLayout
-        android:id="@+id/llCard"
+        android:id="@+id/llMainTitle"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/ivToolBarMyCenter"
+            android:layout_width="@dimen/mmm_avatar_size_in_contact"
+            android:layout_height="@dimen/mmm_avatar_size_in_contact"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/default_avatar_3" />
 
         <FrameLayout
-            android:id="@+id/flContentSearch"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="@dimen/mmm_font_s16"
-            android:layout_marginRight="20dp"
-            android:alpha="1"
-            android:background="@drawable/mmm_c90_s08_s00_w0_r9005">
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
-            <TextView
-                android:id="@+id/tvSearch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="8dp"
+            <!--   顶部搜索框 随着上拉改变透明的 alpha 0~1-->
+            <FrameLayout
+                android:id="@+id/flToolBarSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|right"
                 android:layout_marginBottom="8dp"
-                android:drawableLeft="@drawable/search_3"
-                android:drawablePadding="@dimen/mmm_font_s4"
-                android:gravity="center_vertical"
-                android:text="@string/mmm_hint_please_input_search"
-                android:textColor="@color/color_hint"
-                android:textSize="@dimen/mmm_font_s12" />
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="5dp"
+                android:alpha="0"
+                android:background="@drawable/mmm_main_search_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/search_3"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="请输入要查找的产品或店铺"
+                    android:textColor="@color/color6"
+                    android:textSize="@dimen/mmm_font_s12" />
+            </FrameLayout>
 
         </FrameLayout>
 
-        <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/mmm_font_s16"
-        android:layout_marginBottom="@dimen/mmm_font_s16"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="0"
-                android:textColor="@color/color_textcolor"
-                android:textSize="20dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:drawablePadding="@dimen/mmm_font_s10"
-                android:text="@string/mmm_attention_me"/>
-
-        </LinearLayout>
-
-        <View
-            android:layout_gravity="center"
-            android:background="@color/color_cut_off_line"
-            android:layout_width="0.6dp"
-            android:layout_height="40dp"/>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="0"
-                android:textColor="@color/color_textcolor"
-                android:textSize="20dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawablePadding="@dimen/mmm_font_s10"
-                android:layout_gravity="center"
-                android:text="@string/mmm_unread"/>
-
-        </LinearLayout>
-
-        <View
-            android:layout_gravity="center"
-            android:background="@color/color_cut_off_line"
-            android:layout_width="0.6dp"
-            android:layout_height="40dp"/>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="0"
-                android:textColor="@color/color_textcolor"
-                android:textSize="20dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:drawablePadding="@dimen/mmm_font_s10"
-                android:text="@string/mmm_shop_page_view"/>
-
-        </LinearLayout>
-
-        </LinearLayout>
-
-
-
-    </LinearLayout>
-
-
-    </androidx.cardview.widget.CardView>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.6dp"
-        android:background="@color/color_cut_off_line"
-        android:layout_marginTop="@dimen/mmm_font_s10"/>
-
-    <LinearLayout
-        android:layout_below="@+id/cvMain"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:layout_marginTop="@dimen/mmm_font_s10"
-        android:background="@color/color_pure_white"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:id="@+id/llFrozen"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tvMall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawableTop="@drawable/home_ic_mall_nor"
-                android:text="@string/mmm_home_mall" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/llNews"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tvNews"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawableTop="@drawable/home_ic_news_nor"
-                android:text="@string/mmm_main_tab_news" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/llWork"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tvWork"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawableTop="@drawable/home_ic_work_nor"
-                android:text="@string/mmm_main_tab_work" />
-
-        </LinearLayout>
-
-
+        <ImageView
+            android:id="@+id/ivScan"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/scan"
+            android:padding="@dimen/mmm_font_s10" />
 
     </LinearLayout>
 
     <View
+        android:id="@+id/bgToolbarOpen"
         android:layout_width="match_parent"
-        android:layout_height="0.6dp"
-        android:background="@color/color_cut_off_line"
-        android:layout_marginTop="@dimen/mmm_font_s10"/>
+        android:layout_height="match_parent" />
 
-    </LinearLayout>
-
-</RelativeLayout>
+</LinearLayout>

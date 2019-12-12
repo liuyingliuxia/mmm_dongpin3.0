@@ -1,50 +1,114 @@
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:background="@color/color_pure_white">
+    android:layout_height="90dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/home_bg_def">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+<!--上拉后显示的标题栏-->
 
     <LinearLayout
+        android:id="@+id/llMainTitle2"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/ivToolBarMyCenter"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/default_avatar_3" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingBottom="6dp"
+                    android:paddingTop="6dp"
+                    android:paddingLeft="50dp"
+                    android:drawableLeft="@drawable/search_3"
+                    android:drawablePadding="4dp"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:background="@drawable/mmm_main_search_bg"
+                    android:text="请输入要查找的产品或店铺"
+                    android:textColor="@color/color6"
+                    android:textSize="@dimen/mmm_font_s12" />
+
+                <ImageView
+                    android:id="@+id/ivScan"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/scan"
+                    android:padding="@dimen/mmm_font_s10" />
+
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llToolbarClose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_pure_white"
+        android:paddingTop="@dimen/mmm_font_s10"
+        android:paddingBottom="@dimen/mmm_font_s10"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_collapseMode="pin"
         android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:layout_weight="1"
-        android:textColor="@color/color_textcolor"
-        android:text="@string/mmm_home_mall"/>
+        <TextView
+            android:id="@+id/tvMall2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/color_textcolor"
+            android:textSize="@dimen/mmm_font_s16"
+            android:text="@string/mmm_home_mall"/>
 
         <TextView
+            android:id="@+id/tvNews2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_weight="1"
+            android:textSize="@dimen/mmm_font_s16"
             android:textColor="@color/color_textcolor"
             android:text="@string/mmm_main_tab_news"/>
 
         <TextView
+            android:id="@+id/tvWork2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:gravity="center"
+            android:textSize="@dimen/mmm_font_s16"
             android:textColor="@color/color_textcolor"
             android:layout_weight="1"
             android:text="@string/mmm_main_tab_work"/>
 
 
     </LinearLayout>
+
     <View
-        android:id="@+id/bg_toolbar_close"
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:background="@color/color_cut_off_line" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bgToolbarClose"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    </FrameLayout>
-
-</RelativeLayout>
+</LinearLayout>

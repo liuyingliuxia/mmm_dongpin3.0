@@ -15,7 +15,7 @@
 
         <ImageView
             android:id="@+id/ivGoods"
-            android:padding="1dp"
+            android:padding="6dp"
             android:layout_width="180dp"
             android:layout_height="200dp"
             android:src="@drawable/sotia_tofu" />

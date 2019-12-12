@@ -17,16 +17,25 @@
         tools:context=".ui.main.MainActivity">
 
         <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/app_bar"
+            android:id="@+id/appBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
+                <!-- 可折叠的Toolbar-->
             <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:id="@+id/toolbar_layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed|snap" >
 
+                <include
+                    layout="@layout/in_open_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="0.7" />
+
+                <!-- 顶部toolbar不被覆盖-->
                 <androidx.appcompat.widget.Toolbar
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -34,25 +43,27 @@
                     app:contentInsetStart="0dp"
                     app:layout_collapseMode="pin" >
 
+                    <!--  toolbar打开时的布局-->
+
                     <include
-                        layout="@layout/in_open_title" />
+                        android:id="@+id/inToolbarOpen"
+                        layout="@layout/in_toolbar_open" />
+                    <!--  toolbar关闭时的布局-->
+                    <include
+                        android:id="@+id/inToolbarClose"
+                        layout="@layout/in_toolbar_close" />
+
 
 
                 </androidx.appcompat.widget.Toolbar>
-
-                <include
-                    layout="@layout/in_toolbar_open"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="50dp"
-                    app:layout_collapseMode="parallax"
-                    app:layout_collapseParallaxMultiplier="0.7" />
 
 
 
             </com.google.android.material.appbar.CollapsingToolbarLayout>
 
+
         </com.google.android.material.appbar.AppBarLayout>
+
 
         <!-- 下拉刷新布局 -->
 <!--        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
@@ -63,6 +74,7 @@
 
 <!--        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
 
+<!--        底部tab-->
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bnvMain"
             android:layout_width="match_parent"
